@@ -1,0 +1,183 @@
+{
+    "Habitos": {
+      "GET": {
+        "endpoint": "/api/Habitos",
+        "exampleResponse": [
+          {
+            "habitoId": 1,
+            "descricao": "Exercícios diários",
+            "tipo": "Saúde",
+            "frequenciaIdeal": 1
+          },
+          {
+            "habitoId": 2,
+            "descricao": "Ler 30 minutos",
+            "tipo": "Educação",
+            "frequenciaIdeal": 2
+          }
+        ]
+      },
+      "POST": {
+        "endpoint": "/api/Habitos",
+        "requestBody": {
+          "descricao": "Ler 30 minutos",
+          "tipo": "Educação",
+          "frequenciaIdeal": 2
+        }
+      },
+      "PUT": {
+        "endpoint": "/api/Habitos/{id}",
+        "requestBody": {
+          "habitoId": 1,
+          "descricao": "Ler 45 minutos",
+          "tipo": "Educação",
+          "frequenciaIdeal": 2
+        }
+      },
+      "DELETE": {
+        "endpoint": "/api/Habitos/{id}"
+      }
+    },
+    "RegistroHabito": {
+      "GET": {
+        "endpoint": "/api/RegistroHabito",
+        "exampleResponse": [
+          {
+            "id": 1,
+            "data": "2025-03-20T00:00:00",
+            "observacoes": "Registro efetuado com sucesso",
+            "habitoDescricao": "Exercícios diários"
+          },
+          {
+            "id": 2,
+            "data": "2025-03-21T00:00:00",
+            "observacoes": "Realizado conforme planejado",
+            "habitoDescricao": "Ler 30 minutos"
+          }
+        ]
+      },
+      "GETById": {
+        "endpoint": "/api/RegistroHabito/{id}",
+        "exampleResponse": {
+          "id": 1,
+          "data": "2025-03-20T00:00:00",
+          "observacoes": "Registro efetuado com sucesso",
+          "habitoDescricao": "Exercícios diários"
+        }
+      },
+      "POST": {
+        "endpoint": "/api/RegistroHabito",
+        "requestBody": {
+          "habitoId": 1,
+          "imagem": "https://exemplo.com/imagem.jpg",
+          "observacoes": "Registro do hábito no dia"
+        }
+      },
+      "PUT": {
+        "endpoint": "/api/RegistroHabito/{id}",
+        "requestBody": {
+          "id": 1,
+          "habitoId": 1,
+          "imagem": "https://exemplo.com/imagem-atualizada.jpg",
+          "observacoes": "Registro atualizado com observações novas"
+        }
+      },
+      "DELETE": {
+        "endpoint": "/api/RegistroHabito/{id}"
+      }
+    },
+    "Unidades": {
+      "GET": {
+        "endpoint": "/api/Unidades",
+        "exampleResponse": [
+          {
+            "unidadeId": 1,
+            "nome": "Unidade Central",
+            "estado": "SP",
+            "cidade": "São Paulo",
+            "endereco": "Av. Paulista, 1000"
+          }
+        ]
+      },
+      "GETById": {
+        "endpoint": "/api/Unidades/{id}",
+        "exampleResponse": {
+          "unidadeId": 1,
+          "nome": "Unidade Central",
+          "estado": "SP",
+          "cidade": "São Paulo",
+          "endereco": "Av. Paulista, 1000"
+        }
+      },
+      "POST": {
+        "endpoint": "/api/Unidades",
+        "requestBody": {
+          "nome": "Unidade Leste",
+          "estado": "SP",
+          "cidade": "São Paulo",
+          "endereco": "Rua Exemplo, 200"
+        }
+      },
+      "PUT": {
+        "endpoint": "/api/Unidades/{id}",
+        "requestBody": {
+          "unidadeId": 1,
+          "nome": "Unidade Central - Atualizada",
+          "estado": "SP",
+          "cidade": "São Paulo",
+          "endereco": "Av. Paulista, 1500"
+        }
+      },
+      "DELETE": {
+        "endpoint": "/api/Unidades/{id}"
+      }
+    },
+    "Usuarios": {
+      "GET": {
+        "endpoint": "/api/Usuarios",
+        "exampleResponse": [
+          {
+            "usuarioId": 1,
+            "email": "usuario@example.com",
+            "nome": "Usuário Exemplo",
+            "dataCadastro": "2025-03-20T00:00:00",
+            "pontosRecompensa": 10
+          }
+        ]
+      },
+      "GETById": {
+        "endpoint": "/api/Usuarios/{id}",
+        "exampleResponse": {
+          "usuarioId": 1,
+          "email": "usuario@example.com",
+          "nome": "Usuário Exemplo",
+          "dataCadastro": "2025-03-20T00:00:00",
+          "pontosRecompensa": 10
+        }
+      },
+      "POST": {
+        "endpoint": "/api/Usuarios",
+        "requestBody": {
+          "email": "novo@example.com",
+          "nome": "Novo Usuário",
+          "senha": "senha123"
+        }
+      },
+      "PUT": {
+        "endpoint": "/api/Usuarios/{id}",
+        "requestBody": {
+          "usuarioId": 1,
+          "email": "atualizado@example.com",
+          "nome": "Usuário Atualizado",
+          "senha": "novasenha"
+        }
+      },
+      "DELETE": {
+        "endpoint": "/api/Usuarios/{id}"
+      },
+      "PATCH": {
+        "endpoint": "/api/Usuarios/{id}/pontos",
+        "requestBody": 5
+      }
+    }
+  }
